@@ -1,0 +1,333 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <script type="text/javascript" src="js/postTest.js">
+
+        </script>
+        <script>
+            window.onload = function () {
+                document.getElementById("posttest").className = "active treeview";
+            }
+        </script>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://iitb.ac.in"><span><img src="images/iitb_logo_30dpi.png"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+        </li>
+        <!--<li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+        </li> -->
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+        <p align="center" style="font-size:1em;"><b>Operating system</b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Operating system</a>
+              </li>
+              <li>
+                <a href="#">Round Robin Process Scheduling Algorithm</a>
+              </li>
+              <li class="active">Post Test</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="treeview" id="aim">
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" >
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+             <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                    </a>
+                </li>
+
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+               <li class="treeview" id="program">
+                    <a href="result.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Result</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html">
+                        <i class=" fa fa-files-o">
+                    </i>
+                    <span>Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                    Round Robin Process Scheduling Algorithm
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                    <p style="font-size:130%; margin-top:2%">
+
+                      <div>
+              <h2>Multiple Choice Question:</h2>
+              <ol>
+                  <li>
+                      Scheduling is:
+                  </li><br>
+                  <input name="que11" type="radio" id="que11" value="a"> a) Allowing a job to use the processor<br>
+                  <input name="que11" type="radio" id="que12" value="b"> b) Making proper use of processor<br>
+                  <input name="que11" type="radio" id="que13" value="c"> c) All of the mentioned<br>
+                  <input name="que11" type="radio" id="que14" value="d"> c) None of the mentioned<br>
+                  <p id="q1"></p><p id=ans1></p>
+                  <br><br>
+                  <li>
+                      If the quantum time of round robin algorithm is very large, then it is equivalent to:
+                  </li><br>
+                  <input name="que12" type="radio" id="que21" value="a"> a) First in first out<br>
+                  <input name="que12" type="radio" id="que22" value="b"> b) Shortest Job Next<br>
+                  <input name="que12" type="radio" id="que23" value="c"> c) Lottery scheduling<br>
+                  <input name="que12" type="radio" id="que24" value="d"> d) None of the above<br>
+                  <p id="q2"></p><p id=ans2></p>
+                  <br><br>
+                  <li>
+                      An optimal scheduling algorithm in terms of minimizing the average waiting time of a given set of processes is ________.
+                  </li><br>
+                  <input name="que13" type="radio" id="que31" value="a"> a) FCFS scheduling algorithm<br>
+                  <input name="que13" type="radio" id="que32" value="b"> b) Round robin scheduling algorithm<br>
+                  <input name="que13" type="radio" id="que33" value="c"> c) Shortest job - first scheduling algorithm<br>
+                  <input name="que13" type="radio" id="que34" value="d"> d) None of the above<br>
+                  <p id="q3"></p><p id=ans3></p>
+                  <br><br>
+                  <li>
+                      Which of the following is a criterion to evaluate a scheduling algorithm?
+                  </li><br>
+                  <input name="que14" type="radio" id="que41" value="a"> a) CPU Utilization: Keep CPU utilization as high as possible<br>
+                  <input name="que14" type="radio" id="que42" value="b"> b) Throughput: number of processes completed per unit time<br>
+                  <input name="que14" type="radio" id="que43" value="c"> c) Waiting Time: Amount of time spent ready to run but not running<br>
+                  <input name="que14" type="radio" id="que44" value="d"> d) All of the above<br>
+                  <p id="q4"></p><p id=ans4></p>
+                  <br><br>
+                  <li>
+                      In interactive environments such as time-sharing systems, the primary requirement is to provide reasonably good response time and <br>in general, to share system resources equitably. In such situations, the scheduling algorithm that is most popularly applied is ________.
+                  </li><br>
+                  <input name="que15" type="radio" id="que51" value="a"> a) Shortest Remaining Time Next (SRTN) Scheduling<br>
+                  <input name="que15" type="radio" id="que52" value="b"> b) Priority Based Preemptive Scheduling<br>
+                  <input name="que15" type="radio" id="que53" value="c"> c) Round Robin Scheduling<br>
+                  <input name="que15" type="radio" id="que54" value="d"> d) None of the above<br>
+                  <p id="q5"></p><p id=ans5></p>
+                  <br><br>
+                  <li>
+                      A scheduling algorithm is fair
+                  </li><br>
+                  <input name="que16" type="radio" id="que61" value="a"> a) If no process faces starvation<br>
+                  <input name="que16" type="radio" id="que62" value="b"> b) If a process is starved, detect it and run it with high priority<br>
+                  <input name="que16" type="radio" id="que63" value="c"> c) If it uses semaphores<br>
+                  <input name="que16" type="radio" id="que64" value="d"> d) Only if a queue is used for scheduling<br>
+                  <p id="q6"></p><p id=ans6></p>
+                  <br><br>
+                  <li>
+                      Which of the following do not belong to queues for processes?
+                  </li><br>
+                  <input name="que17" type="radio" id="que71" value="a"> a) Job Queue<br>
+                  <input name="que17" type="radio" id="que72" value="b"> b) PCB queue<br>
+                  <input name="que17" type="radio" id="que73" value="c"> c) Device Queue<br>
+                  <input name="que17" type="radio" id="que74" value="d"> d) Ready Queue<br>
+                  <p id="q7"></p><p id=ans7></p>
+                  <br><br>
+                  <li><pre style="font-size: 17px; font-family: 'Times New Roman', Times, serif ;width: 75%;">
+  Consider the following set of processes, the length of the CPU burst time given in milliseconds:
+  Process                Burst time
+  P1                           6
+  P2                           8
+  P3                           7
+  P4                           3
+  Assuming the above process being scheduled with the SJF scheduling algorithm:</pre>
+                  </li><br>
+                  <input name="que18" type="radio" id="que81" value="a"> a) The waiting time for process P1 is 3ms.<br>
+                  <input name="que18" type="radio" id="que82" value="b"> b) The waiting time for process P1 is 0ms.<br>
+                  <input name="que18" type="radio" id="que83" value="c"> c) The waiting time for process P1 is 16ms.<br>
+                  <input name="que18" type="radio" id="que84" value="d"> d) The waiting time for process P1 is 9ms.<br>
+                  <p id="q8"></p><p id=ans8></p>
+                  <br><br>
+                  <li>
+                      Shortest Job First executes first the job:
+                  </li><br>
+                  <input name="que19" type="radio" id="que91" value="a"> a) With the least processor needs<br>
+                  <input name="que19" type="radio" id="que92" value="b"> b) That first entered the queue<br>
+                  <input name="que19" type="radio" id="que93" value="c"> c) That has been in the queue for the longest<br>
+                  <input name="que19" type="radio" id="que94" value="d"> d) That last entered the queue<br>
+                  <p id="q9"></p><p id=ans9></p>
+                  <br><br>
+                  <li>
+                      The processes that are residing in main memory and are ready and waiting to execute are kept on a list called:
+                  </li><br>
+                  <input name="que20" type="radio" id="que101" value="a"> a) Job queue<br>
+                  <input name="que20" type="radio" id="que102" value="b"> b) Ready queue<br>
+                  <input name="que20" type="radio" id="que103" value="c"> c) Execution queue<br>
+                  <input name="que20" type="radio" id="que104" value="d"> d) Process queue<br>
+                  <p id="q10"></p><p id=ans10></p>
+                  <br><br>
+
+              </ol>
+
+                  <input  type="button" value="Submit" onclick="testMCQ();">
+              <p id="p1">
+
+              </p>
+
+              <table id="testResultTable">
+
+              </table>
+          </div>
+
+
+                    </p>
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+                <h4 align="center">Lab contributed by <!-- Institute Name --> </h4>
+            </footer>
+        </div>
+
+    </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

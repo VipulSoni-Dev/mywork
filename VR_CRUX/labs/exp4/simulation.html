@@ -1,0 +1,475 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <!-- Simulation scripts start-->
+        <script src="../src/math.ob.js"></script>
+
+        <script src="../src/numcheck.ob.js"></script>
+        <script src="../src/canvasjschart.ob.js"></script>
+        <script src="../src/bracket.ob.js"></script>
+        <link href="../src/StyleSheet1.css" rel="stylesheet" />
+        <script>
+            window.onload = function () {
+                document.getElementById("simulation").className = "active treeview";
+            }
+        </script>
+
+        <link rel="stylesheet" href="css/template.css">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <link href="css/test.css" rel="stylesheet" type="text/css"/>
+
+        <script type="text/javascript" src="js/index.js">
+        </script>
+
+        <script type="text/javascript" src="js/algorithm.js">
+        </script>
+
+        <script src="js/animation.ob.js"></script>
+
+        <script type="text/javascript" src="js/roundRobin.js">
+        </script>
+        <script type="text/javascript" src="js/queue.js">
+        </script>
+        <script type="text/javascript" src="js/process.js">
+        </script>
+        <script type="text/javascript" src="js/controll.js">
+        </script>
+        <script type="text/javascript" src="js/simulator.js">
+        </script>
+        <script type="text/javascript" src="js/utility.js">
+        </script>
+        <script type="text/javascript" src="js/trafficLight.js">
+        </script>
+        <script type="text/javascript" src="js/shared.js">
+        </script>
+        <script type="text/javascript" src="js/shared_test.js">
+        </script>
+        <script type="text/javascript" src="js/test.js">
+        </script>
+        <script type="text/javascript" src="js/test_utility.js">
+        </script>
+        <script src="js/sjf.js" type="text/javascript"></script>
+        <script src="js/sjf_utility.js" type="text/javascript"></script>
+        <!-- Simulation scripts end-->
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+
+        <!--Navigation Bar-->
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://iitb.ac.in"><span><img src="images/iitb_logo_30dpi.png"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                        </li>
+                        <!--<li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+                      </li>
+                      <li class="active">
+                      <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+                    </li>
+                    <li class="active">
+                    <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+                  </li>
+                  <li class="active">
+                  <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+                </li> -->
+                        <li class="active">
+                            <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+            <header class="main-header">
+                <!-- Logo -->
+                <a href="../index.html" class="logo">
+                    <p align="center" style="font-size:1em;"><b>Operating System<!-- Write your Operating System --></b></p>
+                </a>
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <section class="content-header">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="../index.html"><i class="fa fa-dashboard"></i>Operating System<!-- Write your Operating System --></a>
+                            </li>
+                            <li>
+                                <a href="#">Meassage Passing Using SHARED MEMORY</a>
+                            </li>
+                            <li class="active">Simulation</li>
+                        </ol>
+                    </section>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- search form -->
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group"></div>
+                    </form>
+                    <!-- /.sear ch form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li class="treeview" id="aim">
+                            <a href="index.html">
+                                <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                            </a>
+                        </li>
+                        <li class="treeview" id="theory">
+                            <a href="theory.html" >
+                                <i class="fa fa-files-o"></i>
+                                <span>Theory</span>
+                            </a>
+                        </li>
+                        <!--   <li class="treeview" id="numerical">
+                        <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                      </span>
+                    </a>
+                  </li>
+                  <li class="treeview" id="program">
+                  <a href="program.php">
+                  <i class="fa fa-laptop"></i>
+                  <span>Program</span>
+                  <span class="pull-right-container">
+                </span>
+                </a>
+                </li> -->
+                        <li class="treeview" id="pretest">
+                            <a href="pretest.html">
+                                <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                            </a>
+                        </li>
+
+                        <li class="treeview" id="procedure">
+                            <a href="procedure.html">
+                                <i class="fa fa-files-o"></i> <span>Procedure</span>
+                            </a>
+                        </li>
+                        <li class="treeview" id="simulation">
+                            <a href="simulation.html">
+                                <i class="fa fa-laptop"></i>
+                                <span>Simulation</span>
+                                <span class="pull-right-container">
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="treeview" id="program">
+                            <a href="result.html">
+                                <i class="fa fa-laptop"></i>
+                                <span>Result</span>
+                                <span class="pull-right-container">
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="treeview" id="posttest">
+                            <a href=" posttest.html">
+                                <i class=" fa fa-files-o">
+                                </i>
+                                <span>Post Test</span>
+                                <span class="pull-right-container">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="treeview" id="ref">
+                            <a href="references.html">
+                                <i class="fa fa-files-o"></i>
+                                <span>References</span>
+                                <span class="pull-right-container">
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1 align="center">Meassage Passing Using SHARED MEMORY</h1>
+                    <!-- Write your experiment name -->
+
+
+                </section>
+                <script type="text/javascript">
+            // Popup window code
+            function newPopup(url) {
+                popupWindow = window.open(url, 'popUpWindow', 'height=500,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes')
+            }
+                </script>
+                <section class="content-header" style="float:right; margin-top:2%">
+                    <a href="JavaScript:newPopup('procedure.html');" style="color:green;font-size: 16px"><img src="../../dist/img/popout.png" style="height:20px; width:20px; "> Pop Up Procedure</a>
+                    <br>
+                    <br>
+                    <a href="" style="color:green; font-size: 16px"><img src="../../dist/img/fork.png" style="height:20px; width:20px; "></a>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+
+                    <div class="tabset">
+                        <!-- Tab 1 -->
+                        <input type="radio" name="tabset" id="tab1" aria-controls="practice" checked>
+                        <label for="tab1">Practice</label>
+                        <!-- Tab 2 -->
+                        <input type="radio" name="tabset" id="tab2" aria-controls="analysis" >
+                        <label for="tab2">Analysis</label>
+                        <!-- Tab 3 -->
+                        <input type="radio" name="tabset" id="tab3" aria-controls="take a test" onclick="set()">
+                        <label for="tab3">Take a Test</label>
+
+                        <div class="tab-panels">
+                            <section id="practice" class="tab-panel" style="width: 100%">
+
+
+                                <div class="sender" id="send">
+                                    Sender                                    
+                                </div>
+                                <label id="sender_lbl" style="position: absolute;margin: -4%  16%;display:none ">0101010101&DoubleRightArrow;</label>
+
+                                <div class="sender2" id="receive">
+                                    Receiver                                  
+                                </div>                                    
+                                <label id="receiver_lbl" style="position: absolute;margin: 3.6%  48%;display:none ">0101010101&DoubleRightArrow;</label>
+                                <table id="shared_mem">
+                                    <caption style="text-align: center" >Shared Memory</caption>
+                                    <tr>
+                                        <td id="row1">-</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="row2">-</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td id="row3">-</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td id="row4">-</td>
+                                    </tr>
+
+
+                                </table>   
+
+                                <script type="text/javascript" >
+                                    //shared_memory();
+                                   // binaryflow();
+                                </script>
+                                <!--                                    <div class="sender2" style="margin: 0% 59%;height:15%;">
+                                                                        Computer2                                   
+                                                                    </div>   -->
+                                 <label id="computer_lbl1" style="position: absolute;margin: -15.2%  39%;transform: rotate(90deg);display:none">0101&DoubleRightArrow;</label>
+                                 <label id="computer_lbl2" style="position: absolute;margin: -12.2%  39%;transform: rotate(90deg);display:none ">&DoubleLeftArrow;0101</label>
+                                 <div   id="comp" class="sender" style="margin: -12% 41%;">
+                                    Computer                                  
+                                </div>
+                                 <button onclick="init()" style="position: absolute;margin: 0% 0%;">start</button>
+                            </section>
+                            <!--                            <section id="practice" class="tab-panel" style="width: 100%">
+                                                            <div class="" style="display:flex">
+                                                                <div class="practice-part-1" style="width:20%">
+                                                                    <div>
+                                                                        <label>Enter the number of Process:</label>
+                                                                        <input type="number" id="noOfProcess" required="true" min="0" max="5" required style="width:15%; float:right">
+                                                                        <br>
+                            
+                                                                        <label>Set Speed</label><br>
+                                                                        <input type="range" id="speed" required="true"  min="1" max="10" required style="width:80%; display:flex">
+                                                                        <br>
+                            
+                            
+                                                                        <div>
+                                                                            <table id="myTable">
+                            
+                                                                            </table>
+                                                                        </div>
+                                                                        <br>
+                                                                        <div>
+                                                                            <button type="submit" id="noOfProcessBtn" onclick="createTable()">Add Processes</button>
+                                                                            <input type="button" id="fill_random" value="Fill Random" onclick="fillRandom()"></input>
+                            
+                                                                        </div>
+                                                                    </div>
+                                                                    <br>
+                                                                    <div class="" style="width:100% display:flex">
+                                                                        <input type="button" value="Start" id="startButton" onclick="startSimulator()">
+                                                                        <input type="button" value="Pause" id="pauseButton" onclick="pauseSimulator()">
+                                                                        <input type="button" value="Clear" id="clearButton" onclick="resetEverything()">
+                                                                    </div>
+                            
+                                                                </div>
+                            
+                                                                <div style="width:80%">
+                                                                    <div class="processChartDiv">
+                                                                        <table id="fcfsTable"></table>
+                                                                        <canvas id="processChartCanvas" style="width:100%; height:300" ></canvas>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                            
+                                                        </section>-->
+
+                            <section id="analysis" class="tab-panel">
+                                <input type="button" value="Load Example" onclick="copyCanvasToAnalys()">
+                                <input type="button" name="" value="Real Life Example of RR" onclick="playRealLifeExample();">
+                                <div id="analysys-page" style="display:flex; height:50%">
+                                    <div style="width:50%">
+                                        <br>
+                                        <image src="images/analysis.png" id="analysis_img" height="80%"  width="110%" >
+
+                                        <!--<canvas id="processChartDivAnalysis" style="width:100%; height:100%"></canvas>-->
+                                    </div>
+                                    <div id="analysisTable" style="width:50%; display:inline-block">
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <section id="take_a_test" class="tab-panel">
+
+                                <h4>Meassage Passing Using SHARED MEMORY:</h4>
+                                <div id="test_help_div" style="display: none">
+                                   <button style="position: absolute;height: 4%;width: 12%;margin: 8.0% 58%;" onclick="test_help()">help</button>
+                                    Steps:<br>
+                                    1)Send data into shared memory by Send data button<br>
+                                    2)Compute area of given radius(data) by using compute area button<br>
+                                    3)Receive data using Receive data button<br>
+                                    <br>
+                                    <br>
+                                    Note: If you computed right area then receiver will show green color else red color will be shown.<br>
+                                    Note: To reset test use reset test button       
+                                    
+                                </div>
+                                <div id="test_div" style="width:100%; display:flex">
+                                   
+                                <div class="sender" id="test_send">
+                                    Sender                                    
+                                </div>
+                                    <button style="position: absolute;height: 4%;width: 12%;margin: 2.0% 15.5%;" onclick="test_send()">Send data</button>
+                                    <button style="position: absolute;height: 4%;width: 12%;margin: 14% 29.5%;" onclick="test_compute()">Compute area</button>
+                                    <button style="position: absolute;height: 4%;width: 12%;margin: 2.0% 44%;" onclick="test_receive()">Receive data</button>
+                                    <button style="position: absolute;height: 4%;width: 12%;margin: 8.0% 1.5%;" onclick="test_reset()">Reset test</button>
+                                    <button style="position: absolute;height: 4%;width: 12%;margin: 8.0% 58%;" onclick="test_help()">help</button>
+                                <div class="sender" id="test_receiver" style="position: absolute;margin: 0 57%;height: 11%;width: 14.5%;padding: 2.5% 5%;">
+                                    Receiver                                    
+                                </div>
+                                    
+                                    <!--                                <label id="sender_lbl" style="position: absolute;margin: -4%  16%;display:none ">0101010101&DoubleRightArrow;</label>
+
+                                <div class="sender2" id="receive">
+                                    Receiver                                  
+                                </div>                                    
+                                <label id="receiver_lbl" style="position: absolute;margin: 3.6%  48%;display:none ">0101010101&DoubleRightArrow;</label>-->
+                                <table id="shared_mem_test">
+                                    <caption style="text-align: center" >Shared Memory</caption>
+                                    <tr>
+                                        <td id="test_row1">-</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="test_row2">-</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td id="test_row3">-</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td id="test_row4">-</td>
+                                    </tr>
+
+
+                                </table>   
+
+                                <script type="text/javascript" >
+                                    //shared_memory();
+                                   // binaryflow();
+                                </script>
+                                <!--                                    <div class="sender2" style="margin: 0% 59%;height:15%;">
+                                                                        Computer2                                   
+                                                                    </div>   -->
+<!--                                 <label id="computer_lbl1" style="position: absolute;margin: -15.2%  39%;transform: rotate(90deg);display:none">0101&DoubleRightArrow;</label>
+                                 <label id="computer_lbl2" style="position: absolute;margin: -12.2%  39%;transform: rotate(90deg);display:none ">&DoubleLeftArrow;0101</label>
+                                 <div   id="comp" class="sender" style="margin: -12% 41%;">
+                                    Computer                                  
+                                </div>
+                                     -->
+                                </div>
+                            </section>
+
+
+
+
+                        </div> 
+                    </div>
+                    <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+                <h4 align="center">Lab contributed by L. D. College Of Engineering </h4>
+            </footer>
+            <!-- /.content-wrapper -->
+        </div>
+
+    </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>
